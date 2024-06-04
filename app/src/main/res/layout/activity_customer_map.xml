@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".CustomerMapActivity">
+
+
+    <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/logout"
+                android:text="Log Out"
+                android:textStyle="bold"
+                android:background="@color/design_default_color_primary_variant"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="10dp"
+        />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/startJourney"
+                android:text="Start"
+                android:textStyle="bold"
+                android:background="@color/design_default_color_primary_variant"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="10dp"
+        />
+        <Button android:layout_width="74dp" android:layout_height="41dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/customerSettings"
+                android:layout_marginTop="10dp"
+                android:background="@color/design_default_color_primary_variant"
+                android:drawableLeft="@drawable/setting"
+                android:drawablePadding="4dp"
+
+
+        />
+
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerSettings"
+                android:layout_margin="20sp">
+            <fragment android:id="@+id/autocomplete_fragment"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+            <fragment
+                    android:id="@+id/autocomplete_fragment_pickup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45sp"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginTop="340dp">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editTextPhone"
+                android:hint="Please enter phone no."
+                android:layout_marginHorizontal="50dp"
+                android:visibility="gone"
+
+             />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/callbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="320dp"
+                android:clickable="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+                app:srcCompat="@drawable/baseline_local_phone_24"/>
+    </RelativeLayout>
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/driver_info"
+                  android:layout_gravity="bottom"
+                  android:layout_marginBottom="150dp"
+                  android:orientation="horizontal"
+                  android:background="@android:color/white"
+                  android:visibility="gone"
+    >
+        <ImageView android:layout_width="100sp" android:layout_height="100sp"
+                   android:id="@+id/driverProfileImage"
+                   android:src="@mipmap/user"
+                   android:padding="20sp"
+        />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingLeft="40sp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/driverName"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="10sp"
+                      android:paddingTop="10sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/driverPhone"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="10sp"
+                      android:paddingTop="10sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/radioLinearLayout"
+                  android:orientation="vertical"
+                  android:background="@android:color/white"
+                  android:layout_gravity="bottom"
+                  android:layout_marginBottom="100dp"
+                    android:visibility="visible">
+        <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/radioLang"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/choiceLanguage"
+
+        >
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:id="@+id/bangla"
+                         android:text="Bangla"/>
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:id="@+id/english"
+                         android:text="English"/>
+            <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:id="@+id/banglaAndenglish"
+                         android:text="BanglaAndEnglish"/>
+        </RadioGroup>
+    </LinearLayout>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/driver_cancel"
+            android:text="Cancel Driver"
+            android:background="@color/design_default_color_primary_variant"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+    />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/driver_request"
+            android:text="Call Driver"
+            android:background="@color/design_default_color_primary_variant"
+            android:textStyle="bold"
+            android:layout_marginTop="637dp"
+    />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+            android:layout_gravity="center"
+
+            android:id="@+id/driver_list_layout">
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/driver_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" android:layout_marginStart="2dp" android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"/>
+    </RelativeLayout>
+
+</FrameLayout>

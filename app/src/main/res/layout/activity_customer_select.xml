@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerDashBoard"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <Button android:layout_width="74dp" android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/customerSettings"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple"
+        android:drawableLeft="@drawable/setting"
+        android:drawablePadding="4dp"
+
+
+        />
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:text="Log Out"
+        android:textStyle="bold"
+        android:background="@color/purple"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="36dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/Ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="What services would you like to have today?"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="185dp"
+        android:rowCount="2"
+        android:columnCount="1"
+
+        android:background="@drawable/driver_click_bg">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="28dp"
+            android:backgroundDimAmount="@drawable/driver_click_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+                <Button
+                    android:id="@+id/driver"
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_below="@+id/txtshow"
+                    android:text="Driver"
+                    android:background="@drawable/driver_click_bg"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/driver2"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="28dp"
+            app:cardBackgroundColor="@color/white">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <Button
+                    android:id="@+id/helper"
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_below="@+id/txtshow"
+                    android:text="Helper"
+                    android:background="@drawable/driver_click_bg"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/helper"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+    <Button android:layout_width="74dp" android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:id="@+id/back"
+        android:text="Go Back"
+        android:background="@color/purple"
+        android:drawablePadding="4dp"
+
+
+        />
+
+
+</RelativeLayout>

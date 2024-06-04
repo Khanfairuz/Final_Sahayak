@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DriverProfile"
+        android:background="@drawable/regbg">
+    <ImageView android:layout_width="100sp" android:layout_height="100sp"
+               android:layout_marginTop="50dp"
+               android:id="@+id/driverImage"
+               android:src="@mipmap/user"
+               android:layout_marginBottom="20sp"
+    />
+
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/profile"
+              android:text="Driver Profile"
+              android:textSize="25dp"
+              android:textAlignment="center"
+              android:background="@color/cardview_light_background"
+              android:textColor="@color/black"
+
+
+              android:textStyle="bold"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/driverName"
+              android:hint="Name :"
+              android:layout_marginTop="160dp"
+              android:textStyle="bold"
+              android:textColor="@color/black"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/driverPhone"
+              android:hint="Phone :"
+              android:inputType="phone"
+
+              android:layout_below="@+id/driverName"
+              android:layout_marginTop="30dp"
+              android:textStyle="bold"
+              android:textColor="@color/black"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/driverEmail"
+              android:hint="Email :"
+              android:layout_below="@+id/driverPhone"
+              android:layout_marginTop="30dp"
+              android:textStyle="bold"
+              android:textColor="@color/black"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/driverEmailPass"
+              android:hint="Password :"
+              android:layout_below="@+id/driverEmail"
+              android:layout_marginTop="30dp"
+              android:textStyle="bold"
+              android:textColor="@color/black"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+             android:id="@+id/choiceLanguage"
+              android:text="Chose Language"
+              android:textStyle="bold"
+              android:layout_marginTop="10dp"
+              android:layout_below="@+id/driverEmailPass"
+              android:textColor="@color/black"
+              />
+    <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/radioLang"
+                android:orientation="horizontal"
+                android:layout_below="@+id/choiceLanguage"
+
+    >
+    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/bangla"
+                 android:text="Bangla"/>
+    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/english"
+                 android:text="English"/>
+    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/banglaAndenglish"
+                 android:text="BanglaAndEnglish"/>
+          </RadioGroup>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_below="@+id/radioLang"
+            android:layout_centerHorizontal="true"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            android:id="@+id/saveInfo"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_below="@+id/saveInfo"
+            android:layout_centerHorizontal="true"
+            android:text="Back"
+            android:layout_marginTop="30dp"
+            android:id="@+id/backMain"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MapActivity">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/logout"
+            android:text="Log Out"
+            android:textStyle="bold"
+            android:background="@color/design_default_color_primary_variant"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+    />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/startJourney"
+            android:text="Start"
+            android:textStyle="bold"
+            android:background="@color/design_default_color_primary_variant"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+    />
+    <Button android:layout_width="74dp" android:layout_height="41dp"
+            android:id="@+id/driverSettings"
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary_variant"
+            android:drawableLeft="@drawable/setting"
+            android:drawablePadding="4dp"
+
+    />
+
+
+
+    <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/customer_request"
+            android:text="Accept Request"
+            android:background="@color/design_default_color_primary_variant"
+            android:textStyle="bold"
+            android:layout_marginTop="620dp"
+    />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/customer_reject"
+            android:text="Reject Request"
+            android:background="@color/design_default_color_primary_variant"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+    />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp"
+                    android:visibility="visible">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editTextPhone"
+                android:hint="Please enter phone no."
+                android:layout_marginHorizontal="50dp"
+                android:visibility="gone"
+
+        />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/callbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="310dp"
+                android:clickable="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+                app:srcCompat="@drawable/baseline_local_phone_24"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/customer_info"
+                  android:layout_gravity="bottom"
+                  android:layout_marginBottom="100dp"
+                  android:orientation="horizontal"
+                  android:background="@android:color/white"
+                  android:visibility="gone"
+    >
+        <ImageView android:layout_width="100sp" android:layout_height="100sp"
+                   android:id="@+id/cutomerProfileImage"
+                   android:src="@mipmap/user"
+                   android:padding="20sp"
+        />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingLeft="40sp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/customerName"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="10sp"
+                      android:paddingTop="5sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/customerPhone"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="5sp"
+                      android:paddingTop="5sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/customerDestination"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="5sp"
+                      android:paddingTop="5sp"
+                      android:text="Destination___"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/customerPickUPLocation"
+                      android:textStyle="bold"
+                      android:textSize="20sp"
+                      android:paddingBottom="5sp"
+                      android:paddingTop="5sp"
+                      android:text="PickUP___"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
