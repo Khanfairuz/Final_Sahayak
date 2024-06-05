@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driver_click_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Regular"
+            android:textColor="@color/purple"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/regular_floor_clean">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Floor Cleaning"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtshow"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Basic Regular Cleaning with No High Chemical or Machinery Use"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+            <Button
+                android:id="@+id/RegFloor"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                android:background="@color/primary_light"
+                android:text="ADD">
+
+            </Button>
+                <TextView
+
+                    android:id="@+id/textRegFloor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/RegFloor"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="  60tk/100 sq. ft."
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/fan_cleaning">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Fan Cleaning"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Properly clean and wipe the fan"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/Fan"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textFan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="  100tk/per fan"
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/clothwash">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Cloth Washing"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Minimum amount: 10 clothes\nTotal clothes X 10tk"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/cloth"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textcloth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="  10tk/per cloth"
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/dishwashing">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Kitchen Work"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Dish Washing\nFood cleaning and cutting"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/kitchen"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textkitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:gravity="center"
+                    android:text="300tk"
+                    android:textSize="10dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/bathroom">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="1dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Bathroom Clean"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Bathroom Deep Cleaning for 1 Bathroom"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/bathroom"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textBathroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="    1000tk/per \n      bathroom"
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/furniture">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="1dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Furniture Clean"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="All furniture clean and apply oil\nBased on sq. ft. of house"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/furniture"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textFurniture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="    50tk/100 sq. ft."
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/garden">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text=" Garden &amp; Terrace \n Clean"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text=" Do tasks as assigned"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/garden"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textgarden"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="    80tk/100 sq. ft."
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/window">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text=" Window clean"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text=" Clean the windows properly"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/window"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textwindow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="100tk/per window"
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/hourly">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="1dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Hourly Helper Hire"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Light household work, details provide in discussion"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/hourly"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/texthourly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+
+                    android:text="200tk/per hour"
+                    android:textSize="9dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            >
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_gravity="center"
+                android:contentDescription="Regular floor clean"
+                android:src="@drawable/deepclean">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Deep Clean Combo"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:text="Details in next page"
+
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/deep"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:background="@color/primary_light"
+                    android:text="ADD">
+
+                </Button>
+                <TextView
+
+                    android:id="@+id/textdeep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Fan"
+                    android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                    android:gravity="center"
+                    android:text="3000tk"
+                    android:textSize="10dp"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/callHelper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:text="Proceed"
+                android:textColor="@color/primary_dark"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/goback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="80dp"
+                android:text="Go back"
+                android:textSize="20sp"
+                android:textColor="@color/primary_dark"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

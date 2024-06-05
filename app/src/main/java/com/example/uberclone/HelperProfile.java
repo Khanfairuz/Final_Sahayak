@@ -1,5 +1,7 @@
 package com.example.uberclone;
 
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,8 +14,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,16 +30,12 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import org.jetbrains.annotations.NotNull;
 
-
-
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CustomerProfile extends AppCompatActivity {
-
+public class HelperProfile extends AppCompatActivity {
     private EditText mcustomerName , mcustomerPhone , mcustomerEmail , mcustomerEmailPass;
     private Button msaveInfo , mbackmain;
     private FirebaseAuth mAuth;
@@ -55,7 +51,7 @@ public class CustomerProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_profile);
+        setContentView(R.layout.activity_helper_profile);
         boolean isNewUser = getIntent().getBooleanExtra("isNewUser",false);
         //Toast.makeText(CustomerProfile.this , String.valueOf(isNewUser),Toast.LENGTH_LONG).show();
         FirebaseApp.initializeApp(this);
@@ -115,7 +111,7 @@ public class CustomerProfile extends AppCompatActivity {
 
 
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance(databaseUrl);
-                    mCustomerDatabase=firebaseDatabase.getReference().child("CustomerProfile").child(user_id);
+                    mCustomerDatabase=firebaseDatabase.getReference().child("HelperProfile").child(user_id);
                     Map<String, Object> updates = new HashMap<>();
                     updates.put("name", name);
                     updates.put("phone", phone);
@@ -124,7 +120,7 @@ public class CustomerProfile extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     // Update successful
-                                    Toast.makeText(CustomerProfile.this, "Profile Updated!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(HelperProfile.this, "Profile Updated!", Toast.LENGTH_SHORT).show();
                                     // ... (rest of your code for successful update)
                                 }
                             });
@@ -133,31 +129,31 @@ public class CustomerProfile extends AppCompatActivity {
 
 
                     //Map show korar jonno korte hbe
-                    Intent intent=new Intent(CustomerProfile.this, CustomerDashBoard.class);
+                    Intent intent=new Intent(HelperProfile.this, HelperDashBoard.class);
                     startActivity(intent);
                     finish();
 
                 }
                 else {
-                    mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(CustomerProfile.this, new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(HelperProfile.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 // Toast.makeText(CustomerLoginActivity.this ,"Something went wrong" , Toast.LENGTH_LONG).show();
                                 FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                                Toast.makeText(CustomerProfile.this, "Failed Registration: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(HelperProfile.this, "Failed Registration: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             } else {
                                 user_id = mAuth.getCurrentUser().getUid();
                                 //present loogged in
 
                                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance(databaseUrl);
-                                DatabaseReference current_user_db = firebaseDatabase.getReference().child("Users").child("Customers").child(user_id);
+                                DatabaseReference current_user_db = firebaseDatabase.getReference().child("Users").child("Helper").child(user_id);
                                 current_user_db.setValue(true);
                                 //customerprofile
-                                mCustomerDatabase = firebaseDatabase.getReference().child("CustomerProfile").child(user_id);
+                                mCustomerDatabase = firebaseDatabase.getReference().child("HelperProfile").child(user_id);
                                 if(resultUri!=null)
                                 {
-                                    StorageReference filepath= FirebaseStorage.getInstance().getReference().child("Customer_profile").child(user_id);
+                                    StorageReference filepath= FirebaseStorage.getInstance().getReference().child("Helper_profile").child(user_id);
                                     Bitmap bitmap=null;
                                     try {
                                         bitmap= MediaStore.Images.Media.getBitmap(getApplication().getContentResolver() ,resultUri);
@@ -191,7 +187,7 @@ public class CustomerProfile extends AppCompatActivity {
                                     uploadTask.addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull @NotNull Exception e) {
-                                            Toast.makeText(CustomerProfile.this , "Please Select a photo " , Toast.LENGTH_LONG).show();
+                                            Toast.makeText(HelperProfile.this , "Please Select a photo " , Toast.LENGTH_LONG).show();
                                         }
                                     });
 
@@ -207,7 +203,7 @@ public class CustomerProfile extends AppCompatActivity {
 
 
                                 //Map show korar jonno korte hbe
-                                Intent intent = new Intent(CustomerProfile.this, CustomerDashBoard.class);
+                                Intent intent = new Intent(HelperProfile.this, HelperDashBoard.class);
                                 startActivity(intent);
                                 finish();
 
@@ -226,18 +222,20 @@ public class CustomerProfile extends AppCompatActivity {
                 //
                 if(isNewUser)
                 {
-                    Intent intent=new Intent(CustomerProfile.this, CustomerDashBoard.class);
+                    Intent intent=new Intent(HelperProfile.this, HelperDashBoard.class);
                     startActivity(intent);
                     finish();
 
                 }
                 else {
-                    Intent intent = new Intent(CustomerProfile.this, CustomerDashBoard.class);
+                    Intent intent = new Intent(HelperProfile.this, HelperDashBoard.class);
                     startActivity(intent);
                     finish();
                 }
             }
         });
+
+
     }
     private  void  show()
     {
@@ -246,14 +244,14 @@ public class CustomerProfile extends AppCompatActivity {
         {
 
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance(databaseUrl);
-             mCustomerDatabase_U=firebaseDatabase.getReference().child("CustomerProfile").child(user_id);
+            mCustomerDatabase_U=firebaseDatabase.getReference().child("HelperProfile").child(user_id);
 
             mCustomerDatabase_U.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
                         // User exists, retrieve details
-                        Toast.makeText(CustomerProfile.this , "Id  found",Toast.LENGTH_LONG).show();
+                        Toast.makeText(HelperProfile.this , "Id  found",Toast.LENGTH_LONG).show();
                         Map<String, Object> userDetails = (Map<String, Object>) dataSnapshot.getValue();
 
                         // Check if userDetails is not null
@@ -269,12 +267,12 @@ public class CustomerProfile extends AppCompatActivity {
                             mcustomerPhone.setText(phone);
                             mcustomerEmail.setText(email);
                             mcustomerEmailPass.setText(pass);
-                           // mCustomerDatabase_U.removeValue();
+                            // mCustomerDatabase_U.removeValue();
                             if(userDetails.get("imageUrl")!=null)
                             {
                                 mimageUrl=userDetails.get("imageUrl").toString();
                                 //Glide.with(getApplication()).load(mimageUrl).into(mcustomerImage);
-                                Glide.with(CustomerProfile.this).load(mimageUrl).into(mcustomerImage);
+                                Glide.with(HelperProfile.this).load(mimageUrl).into(mcustomerImage);
 
                             }
                         }
@@ -292,7 +290,7 @@ public class CustomerProfile extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(CustomerProfile.this , "Id can not br found",Toast.LENGTH_LONG).show();
+            Toast.makeText(HelperProfile.this , "Id can not br found",Toast.LENGTH_LONG).show();
         }
 
     }
@@ -302,11 +300,9 @@ public class CustomerProfile extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1 && resultCode== Activity.RESULT_OK)
         {
-          final Uri imageUri=data.getData();
-          resultUri=imageUri;
-          mcustomerImage.setImageURI(resultUri);
+            final Uri imageUri=data.getData();
+            resultUri=imageUri;
+            mcustomerImage.setImageURI(resultUri);
         }
     }
 }
-//isNewUser -->true mne upadte korte chai
-//isNewuser--->false mne  first time kortesi reg

@@ -61,7 +61,7 @@
                         android:layout_height="70dp"
                         android:layout_below="@+id/txtshow"
                         android:text="Customer"
-                        android:background="@color/white"
+                        android:background="@color/primary_light"
 
                 />
             </LinearLayout>
@@ -96,7 +96,7 @@
                         android:layout_height="70dp"
                         android:layout_below="@+id/txtshow"
                         android:text="Driver"
-                        android:background="@color/white"/>
+                        android:background="@color/primary_light"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -127,7 +127,7 @@
                         android:layout_height="70dp"
                         android:layout_below="@+id/txtshow"
                         android:text="Helper"
-                        android:background="@color/white"/>
+                        android:background="@color/primary_light"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

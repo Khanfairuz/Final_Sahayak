@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+            android:id="@+id/text_time_when"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When you need the service"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+
+    <TextView
+            android:id="@+id/text_hours_needed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How many hours you need"
+            android:textSize="18sp"
+            android:paddingBottom="4dp"/>
+
+    <TextView
+            android:id="@+id/text_total_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment"
+            android:textSize="18sp"
+            android:paddingBottom="8dp"/>
+
+    <Button
+            android:id="@+id/button_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"/>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<!-- activity_helper_regular.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- Scroll view to contain regular service items -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!-- Linear layout to hold regular service items -->
+        <LinearLayout
+                android:id="@+id/regular_service_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:layout_gravity="right"
+            android:layout_marginTop="500dp"
+            android:text="Back"/>
+</LinearLayout>

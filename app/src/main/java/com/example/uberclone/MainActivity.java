@@ -9,7 +9,7 @@ import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mDriver , mCustomer;
+    private Button mDriver , mCustomer ,mhelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 //user back korte parbe na r main activity te
                 finish();
 
+            }
+        });
+        mhelper=findViewById(R.id.helper);
+        mhelper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this , HelperLogin.class);
+                startActivity(intent);
+                //user back korte parbe na r main activity te
+                finish();
             }
         });
 

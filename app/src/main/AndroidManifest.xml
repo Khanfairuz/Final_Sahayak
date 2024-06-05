@@ -30,6 +30,62 @@
             android:theme="@style/Theme.UberClone"
             tools:targetApi="31">
         <activity
+                android:name=".CartRegularService"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperRegular"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperEmergency"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperProfile"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperLogin"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperDashBoard"
+                android:exported="false"/>
+        <activity
+                android:name=".CartActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".ServiceDoneOrNot"
+                android:exported="false"/>
+        <activity
+                android:name=".Deep"
+                android:exported="false"/>
+        <activity
+                android:name=".Hourly"
+                android:exported="false"/>
+        <activity
+                android:name=".Window"
+                android:exported="false"/>
+        <activity
+                android:name=".Garden"
+                android:exported="false"
+                android:label="@string/title_activity_garden"
+                android:theme="@style/Theme.UberClone"/>
+        <activity
+                android:name=".Furniture"
+                android:exported="false"/>
+        <activity
+                android:name=".Bathroom"
+                android:exported="false"/>
+        <activity
+                android:name=".Kitchen"
+                android:exported="false"/>
+        <activity
+                android:name=".Cloth"
+                android:exported="false"/>
+        <activity
+                android:name=".Fan"
+                android:exported="false"/>
+        <activity
+                android:name=".Floor"
+                android:exported="false"/>
+        <activity
                 android:name=".DriverDashboard"
                 android:exported="false"/>
         <activity
@@ -52,6 +108,15 @@
                 android:exported="false"/>
         <activity
                 android:name=".CustomerProfile"
+                android:exported="false"/>
+        <activity
+                android:name=".CustomerEmergencyHelper"
+                android:exported="false"/>
+        <activity
+                android:name=".CustomerHelperDashboard"
+                android:exported="false"/>
+        <activity
+                android:name=".CustomerRegularHelper"
                 android:exported="false"/>
         <!--
              TODO: Before you run your application, you need a Google Maps API key.

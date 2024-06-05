@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:layout_gravity="right"
+            android:text="Back"
+    />
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:id="@+id/emergency_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
