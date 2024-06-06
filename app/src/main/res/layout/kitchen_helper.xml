@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
     tools:context=".Kitchen"
     android:orientation="vertical"
     android:background="@drawable/dishwashingbg"
@@ -69,19 +67,18 @@
     </LinearLayout>
 
 
-
     <Button
-        android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
-        android:drawablePadding="4dp"
+            android:layout_width="74dp" android:layout_height="41dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/back"
+            android:text="Back"
+            android:background="@color/quantum_purple100"
+            android:drawablePadding="4dp"
 
 
-        />
+            android:translationX="10dp"/>
 
 
 

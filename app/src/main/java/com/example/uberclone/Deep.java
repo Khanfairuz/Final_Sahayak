@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -39,6 +40,7 @@ public class Deep extends AppCompatActivity {
                 total_fee=3000;
                 mcost.setText(String.valueOf(total_fee));
                 cart.addItem("Deep Clean" ,1,total_fee);
+                Toast.makeText(Deep.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }

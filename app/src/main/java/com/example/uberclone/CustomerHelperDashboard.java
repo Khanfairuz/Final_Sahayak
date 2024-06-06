@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CustomerHelperDashboard extends AppCompatActivity {
-    private Button memergency, mregular, mlogout, mcustomerSetting, mback;
+    private Button memergency, mregular, mlogout, mcustomerSetting, mback ,mpastService;
     public cart cr;
 
     @Override
@@ -43,6 +43,15 @@ public class CustomerHelperDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CustomerHelperDashboard.this, CustomerDashBoard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        mpastService=findViewById(R.id.pastService);
+        mpastService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CustomerHelperDashboard.this, ServiceDoneOrNot.class);
                 startActivity(intent);
                 finish();
             }

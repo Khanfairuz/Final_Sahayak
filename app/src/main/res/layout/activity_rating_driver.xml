@@ -19,6 +19,7 @@
                        android:layout_marginTop="25dp"
                        android:layout_centerHorizontal="true"
                        android:id="@+id/ratingStar"
+                       android:background="@color/quantum_amber100"
                        android:numStars="5"
                        />
            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -26,15 +27,17 @@
                    android:layout_below="@+id/ratingStar"
                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
+                   android:background="@drawable/driver_click_bg"
                    android:text="Submit"/>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <Button android:layout_width="200dp" android:layout_height="wrap_content"
             android:id="@+id/backToDashBoard"
             android:layout_below="@+id/submitStar"
             android:layout_marginLeft="20dp"
-            android:layout_margin="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="BackToDashBoard"/>
+            android:layout_marginTop="50dp"
+            android:background="@drawable/driver_click_bg"
+            android:text="BackToDashBoard" android:layout_marginStart="50dp" android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"/>
 
 
 

@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import static android.app.ProgressDialog.show;
 
 public class DriverLoginActivity extends AppCompatActivity {
-    private Button mlogin , mregister;
+    private Button mlogin , mregister, mback;
     private EditText memail , mpassword;
     private FirebaseAuth maAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
@@ -86,7 +86,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                         {
                            // Toast.makeText(DriverLoginActivity.this ,"Something went wrong" , Toast.LENGTH_LONG).show();
                             FirebaseAuthException e = (FirebaseAuthException)task.getException();
-                            Toast.makeText(DriverLoginActivity.this, "Failed Log in: "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DriverLoginActivity.this, "Incorrect password or email ", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -108,6 +108,16 @@ public class DriverLoginActivity extends AppCompatActivity {
 
             }
         });
+        mback=findViewById(R.id.back);
+        mback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DriverLoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
 
     }

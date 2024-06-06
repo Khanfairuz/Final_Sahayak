@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".ChatActivity">
+     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+             android:id="@+id/back"
+             android:layout_marginLeft="300dp"
+             android:text="Back"
+             android:background="@color/quantum_purple100"
+             />
+
+    <TextView
+            android:id="@+id/chatHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/chatListView"
+            android:padding="10dp"
+            android:background="#f0f0f0"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:scrollbars="vertical"
+            android:maxLines="10"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarSize="4dp"
+            android:scrollbarThumbVertical="@android:color/darker_gray"
+            android:visibility="visible"/>
+
+    <ListView
+            android:id="@+id/chatListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/chatInputContainer"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:padding="10dp"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="true" />
+
+    <LinearLayout
+            android:id="@+id/chatInputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+        <EditText
+                android:id="@+id/chatInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Type a message"
+                android:inputType="textMultiLine" />
+
+        <Button
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:background="@color/quantum_purple100"/>
+    </LinearLayout>
+</RelativeLayout>

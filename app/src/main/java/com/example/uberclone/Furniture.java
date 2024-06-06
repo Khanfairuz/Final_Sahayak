@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -70,6 +71,7 @@ public class Furniture extends AppCompatActivity {
                     total_fee = (area * 50)/100; // Assuming the price per unit area is 60
                     mcost.setText(String.valueOf(total_fee));
                     cart.addItem("Furniture", 1, total_fee); // Assuming always one unit of service
+                    Toast.makeText(Furniture.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

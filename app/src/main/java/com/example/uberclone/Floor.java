@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -38,7 +39,7 @@ public class Floor extends AppCompatActivity {
                 // Perform calculation on text change
                 if (!charSequence.toString().isEmpty()) {
                     area = Double.parseDouble(charSequence.toString());
-                    total_fee = (area * 60)/10; // Assuming the price per unit area is 60
+                    total_fee = (area * 60)/100; // Assuming the price per unit area is 60
                     mcost.setText(String.valueOf(total_fee));
                 } else {
                     mcost.setText("0");
@@ -68,6 +69,7 @@ public class Floor extends AppCompatActivity {
                     total_fee = (area * 60)/10; // Assuming the price per unit area is 60
                     mcost.setText(String.valueOf(total_fee));
                     cart.addItem("Floor", 1, total_fee); // Assuming always one unit of service
+                    Toast.makeText(Floor.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

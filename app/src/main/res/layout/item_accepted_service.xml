@@ -4,8 +4,9 @@
               android:layout_height="wrap_content"
               android:orientation="vertical"
               android:padding="8dp"
-              android:background="@drawable/item_background"
+
               android:layout_marginBottom="8dp">
+
 
     <TextView
             android:id="@+id/serviceNameTextView"
@@ -40,6 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/quantum_lightblue100"
                 android:text="Delete" />
 
         <Button
@@ -47,6 +49,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/quantum_lightblue50"
                 android:text="Customer Info" />
     </LinearLayout>
+
+
 </LinearLayout>

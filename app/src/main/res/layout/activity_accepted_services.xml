@@ -4,6 +4,14 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:padding="16dp">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:text="back"
+            android:layout_marginLeft="290dp"
+
+            android:background="@color/quantum_purple100"
+            android:textStyle="bold"/>
+
 
     <ScrollView
             android:layout_width="match_parent"
@@ -16,5 +24,6 @@
                 android:orientation="vertical">
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

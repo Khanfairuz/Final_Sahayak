@@ -60,15 +60,7 @@ public class CustomerDashBoard extends AppCompatActivity {
                 finish();
             }
         });
-        mback=findViewById(R.id.back);
-        mback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(CustomerDashBoard.this , MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
     }
     private void removeUserDataFromDatabase() {

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -70,6 +71,7 @@ public class Cloth extends AppCompatActivity {
                     total_fee = area * 10;
                     //mcost.setText(String.valueOf(total_fee));
                     cart.addItem("Cloth", area, total_fee);
+                    Toast.makeText(Cloth.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

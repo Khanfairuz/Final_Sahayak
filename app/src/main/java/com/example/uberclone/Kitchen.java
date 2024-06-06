@@ -3,6 +3,7 @@ package com.example.uberclone;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -33,6 +34,7 @@ public class Kitchen extends AppCompatActivity {
             public void onClick(View view) {
 
                 cart.addItem("Kitchen" ,1 ,300);
+                Toast.makeText(Kitchen.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -6,7 +6,7 @@ public class EmergencyRequest {
     private double totalPayment;
     private String middlemanID;
     private String userID;
-    private String emergencyID;
+
 
     public EmergencyRequest(String timeWhen, int hoursNeeded, double totalPayment, String middlemanID, String userID) {
         this.timeWhen = timeWhen;
@@ -14,7 +14,7 @@ public class EmergencyRequest {
         this.totalPayment = totalPayment;
         this.middlemanID = middlemanID;
         this.userID = userID;
-        this.emergencyID = emergencyID;
+
     }
 
     public String getTimeWhen() {
@@ -33,11 +33,17 @@ public class EmergencyRequest {
         return middlemanID;
     }
 
+
+
+
+
+
     public String getUserID() {
-        return userID;
+        return  userID;
     }
 
-    public String getEmergencyID() {
-        return emergencyID;
+
+    public String getUserId() {
+        return userID;
     }
 }

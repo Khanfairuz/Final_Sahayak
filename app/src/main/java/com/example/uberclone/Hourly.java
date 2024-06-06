@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -45,6 +46,7 @@ public class Hourly extends AppCompatActivity {
                 total_fee=area*200;
                 mcost.setText(String.valueOf(total_fee));
                 cart.addItem("str" ,1 ,total_fee);
+                Toast.makeText(Hourly.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }

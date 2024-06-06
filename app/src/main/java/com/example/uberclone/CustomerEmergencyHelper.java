@@ -53,7 +53,7 @@ public class CustomerEmergencyHelper  extends AppCompatActivity {
                 int hoursEmergency = Integer.parseInt(mtimeemergency.getText().toString());
 
                 // Calculate the total payment
-                double totalPayment = hoursEmergency * 3000; // Assuming the rate is 3000 per hour
+                double totalPayment = hoursEmergency * 300; // Assuming the rate is 3000 per hour
 
                 // Construct the data structure (HashMap) for emergency service details
                 HashMap<String, Object> emergencyDetails = new HashMap<>();

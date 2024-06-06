@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <uses-feature
             android:name="android.hardware.telephony"
@@ -18,6 +20,7 @@
     <uses-feature android:name="android.hardware.location.gps"/>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
             android:allowBackup="true"
@@ -29,6 +32,16 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.UberClone"
             tools:targetApi="31">
+        <activity
+                android:name=".CartEmergencyService"
+                android:exported="false"/>
+        <activity
+                android:name=".HelperViewCart"
+                android:exported="false"/>
+        <activity android:name=".ChatActivity"/>
+        <activity
+                android:name=".ShowCustomerInfo"
+                android:exported="false"/>
         <activity
                 android:name=".CartRegularService"
                 android:exported="false"/>
@@ -137,10 +150,7 @@
                 android:name=".CustomerMapActivity"
                 android:exported="false"
                 android:label="@string/title_activity_customer_map"/>
-        <activity
-                android:name=".DriverMapsActivity"
-                android:exported="false"
-                android:label="@string/title_activity_driver_maps"/>
+
         <activity
                 android:name=".MapActivity"
                 android:exported="false"/>

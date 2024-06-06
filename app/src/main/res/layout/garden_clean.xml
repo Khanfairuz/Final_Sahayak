@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
     tools:context=".Garden"
     android:orientation="vertical"
     android:background="@drawable/gardenbg"
@@ -29,24 +27,27 @@
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+        android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
         android:layout_marginBottom="36dp"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
-            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
             android:layout_weight="1"
             android:text="Total Area: "
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        >
 
         </TextView>
         <EditText
@@ -55,12 +56,15 @@
             android:id="@+id/areaI"
             android:hint="Give data"
 
-            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:background="@drawable/rounded_corner"
             android:padding="18dp"
-            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"/>
+            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        />
 
 
     </LinearLayout>
@@ -69,7 +73,7 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:gravity="center"
@@ -80,7 +84,7 @@
 
         <TextView
             android:id="@+id/customer"
-            android:layout_width="340dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@+id/Ask"
             android:gravity="center"
@@ -88,28 +92,38 @@
             android:background="@drawable/rounded_corner"
             android:text="Cost per 100 sq feet is 80tk."
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        />
 
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-
+        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
         android:layout_marginTop="350dp"
         >
 
         <TextView
             android:id="@+id/cost"
-            android:layout_width="340dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/rounded_corner"
             android:gravity="center"
             android:text="Total cost:"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        />
 
         <Button
             android:id="@+id/button"
@@ -126,19 +140,18 @@
     </LinearLayout>
 
 
-
     <Button
-        android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
-        android:drawablePadding="4dp"
+            android:layout_width="74dp" android:layout_height="41dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/back"
+            android:text="Back"
+            android:background="@color/quantum_purple100"
+            android:drawablePadding="4dp"
 
 
-        />
+            android:translationX="10dp"/>
 
 
 

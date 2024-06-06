@@ -23,6 +23,7 @@
                  android:layout_below="@+id/amount"
                  android:layout_marginTop="20dp"
                  android:layout_centerHorizontal="true"
+                 android:background="@drawable/driver_click_bg"
                  />
          <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/bkash"
@@ -30,6 +31,7 @@
                  android:layout_below="@+id/cash"
                  android:layout_marginTop="20dp"
                  android:layout_centerHorizontal="true"
+                 android:background="@drawable/driver_click_bg"
          />
 
 

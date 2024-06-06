@@ -20,6 +20,9 @@ public class AcceptedRequestsManager {
     public void addRequest(EmergencyRequest request) {
         acceptedRequests.add(request);
     }
+    public void removeRequest(EmergencyRequest request) {
+        acceptedRequests.remove(request);
+    }
 
     public List<EmergencyRequest> getAcceptedRequests() {
         return acceptedRequests;

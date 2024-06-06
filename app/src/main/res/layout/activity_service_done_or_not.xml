@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:id="@+id/services_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Items will be added dynamically here -->
+
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:text="Back"
+            android:layout_marginTop="600dp"
+            android:background="@color/quantum_purple100"
+            android:layout_marginLeft="310dp" android:translationX="-10dp"/>
+</RelativeLayout>

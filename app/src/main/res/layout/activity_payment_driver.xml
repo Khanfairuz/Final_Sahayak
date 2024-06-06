@@ -16,12 +16,16 @@
               android:textColor="@color/black"
 
     />
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:text="Payment Done"
+                android:layout_marginTop="400dp"
                 android:id="@+id/backToDashBoard"
-                android:layout_below="@+id/amount"
-                android:text="Back"
-                android:layout_marginTop="220dp"
-                android:layout_marginLeft="300dp"/>
+                android:background="@drawable/driver_click_bg"/>
+
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

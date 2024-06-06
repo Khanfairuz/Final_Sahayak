@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
     tools:context=".CustomerHelperDashboard"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +52,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
@@ -66,7 +64,7 @@
 
                 <Button
                     android:id="@+id/emergency"
-                    android:layout_width="340dp"
+                    android:layout_width="300dp"
                     android:layout_height="100dp"
                     android:layout_below="@+id/Ask"
 
@@ -78,7 +76,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
@@ -89,7 +87,7 @@
 
                 <Button
                     android:id="@+id/regular"
-                    android:layout_width="340dp"
+                    android:layout_width="300dp"
                     android:layout_height="100dp"
 
                     android:layout_below="@+id/txtshow"
@@ -98,20 +96,43 @@
                     android:background="@drawable/driver_click_bg"/>
 
             </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+        android:layout_marginTop="500dp">
 
+        <Button
+            android:id="@+id/pastService"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="View Past Services"
+            android:textSize="20sp"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+
+            android:background="@color/primary_light"/>
+
+    </LinearLayout>
 
 
     <Button android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
-        android:drawablePadding="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/back"
+            android:text="Go Back"
+            android:background="@color/quantum_purple100"
+            android:drawablePadding="4dp"
 
 
-        />
+            android:translationX="-20dp"/>
 
 
 </RelativeLayout>

@@ -54,12 +54,12 @@
         android:id="@+id/register"
         android:background="@drawable/driver_click_bg"/>
     <Button android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:id="@+id/back"
         android:text="Go Back"
-        android:background="@color/purple"
+        android:background="@color/quantum_purple100"
         android:drawablePadding="4dp"
 
 

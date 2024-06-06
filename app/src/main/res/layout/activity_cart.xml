@@ -33,12 +33,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Final"
+            android:background="@color/quantum_lightblue100"
             android:layout_marginTop="16dp"
               android:layout_gravity="center"
                                         />
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/back"
             android:layout_gravity="right"
-            android:text="Back"/>
+            android:background="@color/quantum_purple100"
+            android:text="Back" android:translationX="-10dp"/>
 
 </LinearLayout>

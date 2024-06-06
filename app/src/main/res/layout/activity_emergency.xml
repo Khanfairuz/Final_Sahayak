@@ -6,7 +6,8 @@
             android:id="@+id/back"
             android:layout_gravity="right"
             android:text="Back"
-    />
+            android:background="@color/quantum_purple100"
+            android:translationX="-10dp"/>
 
 
     <ScrollView

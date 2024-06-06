@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
     tools:context=".CustomerEmergencyHelper"
     android:orientation="vertical"
    >
@@ -28,22 +26,22 @@
         />
 
     <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="90dp"
             android:layout_marginEnd="50dp"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="36dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal" >
         <TextView
                 android:id="@+id/Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Time"
+                android:text=" Time"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold">
+                android:textStyle="bold"
+        android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text">
 
         </TextView>
         <EditText
@@ -54,20 +52,22 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text">
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                >
 
         </EditText>
 
 
+
     </LinearLayout>
     <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="164dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="100dp"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="36dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal" >
         <TextView
                 android:id="@+id/hours"
                 android:layout_width="wrap_content"
@@ -76,7 +76,9 @@
                 android:text="Total Hours:"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold">
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+               >
 
         </TextView>
         <EditText
@@ -87,10 +89,10 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text">
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                >
 
         </EditText>
-
 
 
     </LinearLayout>
@@ -98,7 +100,7 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:gravity="center"
@@ -109,42 +111,43 @@
 
 
         <TextView
-            android:id="@+id/customer"
-            android:layout_width="340dp"
-            android:layout_height="160dp"
-            android:layout_below="@+id/Ask"
-            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
-            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
-            android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-            android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
-            android:background="@drawable/rounded_corner"
-            android:text="\n   Description:\n     *Services in 24 hours\n     *Light household chores\n     *Details will be discussed over\n   phone\n  "
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
+                android:id="@+id/customer"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/Ask"
+                android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:background="@drawable/rounded_corner"
+                android:text="\n     Description:\n     *Services in 24 hours\n     *Light household chores\n     *Details will be discussed over\n       phone\n  "
+                android:textSize="20sp"
+                android:textColor="@color/black" />
 
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
-        android:layout_marginTop="420dp">
-
-        <TextView
-            android:id="@+id/helper"
-            android:layout_width="340dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
             android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
-            android:layout_below="@+id/txtshow"
-            android:text=" \n Cost:\n     Per hour: 300BDT"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded_corner"/>
+            android:layout_marginTop="426dp" >
+
+        <TextView
+                android:id="@+id/helper"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+                android:layout_below="@+id/txtshow"
+                android:text=" \n      Cost:\n       Per hour: 300BDT"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_corner"/>
         <Button
                 android:id="@+id/button"
                 android:layout_width="130dp"
@@ -163,12 +166,12 @@
 
     <Button
         android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
+        android:text="Back"
+        android:background="@color/quantum_purple100"
         android:drawablePadding="4dp"
 
 

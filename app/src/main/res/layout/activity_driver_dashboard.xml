@@ -13,7 +13,7 @@
         android:layout_height="41dp"
         android:id="@+id/driverSettings"
         android:layout_marginTop="10dp"
-        android:background="@color/purple"
+        android:background="@color/quantum_purple100"
         android:drawableLeft="@drawable/setting"
         android:drawablePadding="4dp"
         />
@@ -24,7 +24,7 @@
         android:id="@+id/logout"
         android:text="Log Out"
         android:textStyle="bold"
-        android:background="@color/purple"
+        android:background="@color/quantum_purple100"
         android:layout_marginLeft="290dp"
         android:layout_marginTop="10dp"
         />
@@ -75,17 +75,7 @@
                     android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"/>
             </LinearLayout>
 
-    <Button android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
-        android:drawablePadding="4dp"
 
-
-        />
 
 
 </RelativeLayout>

@@ -10,7 +10,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class HelperDashBoard extends AppCompatActivity {
-    private Button memergency ,mregular ,mback , mlogout,  mcustomerSetting;
+    private Button memergency ,mregular ,mback , mlogout,  mcustomerSetting ,mserviceCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +63,16 @@ public class HelperDashBoard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(HelperDashBoard.this, HelperProfile.class);
                 intent.putExtra("isNewUser", true);
+                startActivity(intent);
+                finish();
+            }
+        });
+        mserviceCart=findViewById(R.id.serviceCart);
+        mserviceCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HelperDashBoard.this, HelperViewCart.class);
+
                 startActivity(intent);
                 finish();
             }

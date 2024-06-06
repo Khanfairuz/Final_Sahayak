@@ -7,6 +7,20 @@
         android:layout_height="match_parent"
         tools:context=".DriverLoginActivity"
         android:background="@drawable/loginbg">
+    <TextView
+            android:id="@+id/txtshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="Shahayak"
+            android:textColor="@color/purple"
+            android:textSize="30dp"
+            android:textStyle="bold"
+    />
+
     <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
               android:id="@+id/email"
               android:hint="Email :"
@@ -31,13 +45,26 @@
             android:layout_centerHorizontal="true"
             android:text="Log In"
             android:layout_marginTop="100dp"
+            android:background="@drawable/driver_click_bg"
             android:id="@+id/login"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_below="@+id/login"
             android:layout_centerHorizontal="true"
             android:text="Register"
             android:layout_marginTop="50dp"
+            android:background="@drawable/driver_click_bg"
             android:id="@+id/register"/>
+    <Button android:layout_width="74dp" android:layout_height="41dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/back"
+            android:text="Go Back"
+            android:background="@color/quantum_purple100"
+            android:drawablePadding="4dp"
+
+
+    />
 
 
 

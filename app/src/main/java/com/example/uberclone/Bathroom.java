@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -68,6 +69,7 @@ public class Bathroom extends AppCompatActivity {
                     total_fee = area * 1000;
                     //mcost.setText(String.valueOf(total_fee));
                     cart.addItem("Bathroom", area, total_fee);
+                    Toast.makeText(Bathroom.this, "Service saved successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

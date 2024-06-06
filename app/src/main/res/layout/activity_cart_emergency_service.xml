@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_cart_emergency_service.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:text="back"
+            android:background="@color/quantum_purple100"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="290dp"/>
+
+    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <ListView
+                    android:id="@+id/emergency_list_view"
+                    android:layout_marginTop="70dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

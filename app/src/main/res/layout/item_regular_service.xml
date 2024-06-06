@@ -2,29 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="horizontal">
+              android:orientation="vertical">
 
     <TextView
             android:id="@+id/text_service_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Service Name" />
+            android:layout_gravity="center"
+            android:translationX="-140dp"
+            android:layout_marginTop="10dp"
+            android:text="Service Name"/>
 
     <TextView
             android:id="@+id/text_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amount" />
+            android:layout_gravity="center"
+            android:translationX="-158dp"
+            android:layout_marginTop="10dp"
+            android:text="Amount"/>
 
     <TextView
             android:id="@+id/text_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price" />
+            android:layout_gravity="center"
+            android:translationX="-166dp"
+            android:layout_marginTop="10dp"
+            android:text="Price"/>
 
     <Button
             android:id="@+id/button_accept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accept" />
+            android:layout_gravity="right"
+            android:background="@color/quantum_purple100"
+            android:text="Accept" android:translationX="-30dp"/>
 </LinearLayout>

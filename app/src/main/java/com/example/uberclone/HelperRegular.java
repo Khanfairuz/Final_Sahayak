@@ -122,6 +122,8 @@ public class HelperRegular extends AppCompatActivity {
         itemRef.child("middleman").setValue(middlemanID)
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(HelperRegular.this, "Service accepted", Toast.LENGTH_SHORT).show();
+                    AcceptedRegularService acceptedService = new AcceptedRegularService(serviceName, amount, price, itemKey,userID);
+                    AcceptedRegularServicesManager.getInstance().addAcceptedService(acceptedService);
                     // Add the accepted service to a list or perform any other action
                 })
                 .addOnFailureListener(e -> {

@@ -35,7 +35,9 @@ public class PaymentType extends AppCompatActivity {
         mcash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(PaymentType.this, RatingDriver.class);
+                startActivity(intent);
+                finish();
             }
         });
         //

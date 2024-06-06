@@ -155,16 +155,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         mapFragment.getMapAsync(this);
 
         // Logout button
-        mlogout = findViewById(R.id.logout);
-        mlogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                removeUserDataFromDatabase();
-                Intent intent = new Intent(CustomerMapActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
         //driver uinfo
         mdriver_info=findViewById(R.id.driver_info);
         mdriverProfileImage=findViewById(R.id.driverProfileImage);
@@ -341,16 +332,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         //Drwing route
         polylines = new ArrayList<>();
         //////////////////////////////////
-        mcustomerSetting=findViewById(R.id.customerSettings);
-        mcustomerSetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(CustomerMapActivity.this, CustomerProfile.class);
-                intent.putExtra("isNewUser", true);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
      mstartJourney.setOnClickListener(new View.OnClickListener() {
          @Override
@@ -495,13 +477,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         // No need to remove driver's location from the database here
     }
 
-    private void removeUserDataFromDatabase() {
-        String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        String databaseUrl = "https://uberclone-59bcc-default-rtdb.asia-southeast1.firebasedatabase.app/";
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance(databaseUrl);
-        DatabaseReference ref = firebaseDatabase.getReference().child("Users").child("Customers").child(user_id);
-        ref.setValue(null);
-    }
+
     //Payment Activity Load hbe
     private  void LoadPayMentActivity()
     {
@@ -958,6 +934,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                 driverList.clear();
                 geoQuery.removeAllListeners();
                 driverListLayout.setVisibility(View.GONE);
+                mdriver_info.setVisibility(View.GONE);
 
                 if (ref != null && refListener != null) {
                     ref.removeEventListener(refListener);
@@ -1129,7 +1106,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         GeoFire geoFire = new GeoFire(driverLocationRef);
         geoQuery = geoFire.queryAtLocation(new GeoLocation(locationToUse.latitude, locationToUse.longitude), radius);
         geoQuery.removeAllListeners();
-        Toast.makeText(CustomerMapActivity.this, "GEOOO", Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(CustomerMapActivity.this, "GEOOO", Toast.LENGTH_SHORT).show();
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
             @Override
             public void onKeyEntered(String key, GeoLocation location) {
@@ -1293,7 +1270,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
 
                                     // Make the driver list layout visible if it contains items
                                     if (!driverList.isEmpty()) {
-                                          Toast.makeText(CustomerMapActivity.this ,"visible howar kotha" , Toast.LENGTH_LONG).show();
+                                       //   Toast.makeText(CustomerMapActivity.this ,"visible howar kotha" , Toast.LENGTH_LONG).show();
                                          driverListLayout.setVisibility(View.VISIBLE);
                                     }
                                 }
@@ -1314,7 +1291,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
             }
         });
     }
-    private  double per_km_fee=57;
+    private  double per_km_fee=40;
     private double total_fee;
     private  void fee()
     {
@@ -1329,6 +1306,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         total_fee=distance*per_km_fee;
         DecimalFormat df = new DecimalFormat("#.##"); // Create a DecimalFormat for two decimal places
         total_fee= Double.parseDouble(df.format(distance * per_km_fee));
+        total_fee=(double)Math.round(total_fee);
 
     }
 

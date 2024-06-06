@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.jetbrains.annotations.NotNull;
 
 public class CustomerLoginActivity extends AppCompatActivity {
-    private Button mlogin , mregister;
+    private Button mlogin , mregister, mback;
     private EditText memail , mpassword;
     private FirebaseAuth maAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
@@ -78,7 +78,7 @@ public class CustomerLoginActivity extends AppCompatActivity {
                         {
                            // Toast.makeText(CustomerLoginActivity.this ,"Something went wrong" , Toast.LENGTH_LONG).show();
                             FirebaseAuthException e = (FirebaseAuthException)task.getException();
-                            Toast.makeText(CustomerLoginActivity.this, "Failed Registration: "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerLoginActivity.this, "Incorrect password or email ", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -94,6 +94,16 @@ public class CustomerLoginActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+        mback=findViewById(R.id.back);
+        mback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CustomerLoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

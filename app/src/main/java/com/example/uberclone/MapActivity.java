@@ -120,29 +120,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback{
         //Drwing route
         polylines = new ArrayList<>();
         //log out
-        mlogout=findViewById(R.id.logout);
-        mlogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                removeUserDataFromDatabase();
-                Intent intent=new Intent(MapActivity.this , MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
         getAssignedCustomer();
         //////////////////////////////////
-        mdriverSettings=findViewById(R.id.driverSettings);
-        mdriverSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MapActivity.this, DriverProfile.class);
-                intent.putExtra("isNewUser", true);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
         ///
         mcustomer_info=findViewById(R.id.customer_info);
@@ -349,7 +331,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback{
         finish();
 
     }
-    private  double per_km_fee=57;
+    private  double per_km_fee=40;
     private double total_fee;
     private  void fee()
     {
@@ -364,6 +346,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback{
        // total_fee=distance*per_km_fee;
         DecimalFormat df = new DecimalFormat("#.##"); // Create a DecimalFormat for two decimal places
         total_fee= Double.parseDouble(df.format(distance * per_km_fee));
+        total_fee=(double)Math.round(total_fee);
 
     }
     private  void removePolyLine()
@@ -537,7 +520,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback{
 
 
 
-                    Toast.makeText(MapActivity.this, "HIII", Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(MapActivity.this, "HIII", Toast.LENGTH_LONG).show();
                     Toast.makeText(MapActivity.this , String.valueOf(mLastLocation.getLatitude())+" "+String.valueOf(mLastLocation.getLongitude()) ,Toast.LENGTH_LONG).show();
                     pickUpMarker = mMap.addMarker(new MarkerOptions().position(customerLatLng).title("Pick Up Location").icon(bitmapDescriptor(getApplicationContext(),R.drawable.customer)));
 

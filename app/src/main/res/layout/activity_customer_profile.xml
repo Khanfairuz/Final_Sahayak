@@ -60,12 +60,14 @@
             android:layout_centerHorizontal="true"
             android:text="Save"
             android:layout_marginTop="20dp"
+            android:background="@color/quantum_lightblue100"
             android:id="@+id/saveInfo"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_below="@+id/saveInfo"
             android:layout_centerHorizontal="true"
             android:text="Back"
             android:layout_marginTop="30dp"
+            android:background="@color/quantum_purple100"
             android:id="@+id/backMain"/>
 
 

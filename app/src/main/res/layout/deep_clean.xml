@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-    android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
     tools:context=".Deep"
     android:orientation="vertical"
     android:background="@drawable/deepcleanbg"
@@ -29,7 +27,7 @@
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:gravity="center"
@@ -40,7 +38,7 @@
 
         <TextView
             android:id="@+id/customer"
-            android:layout_width="340dp"
+            android:layout_width="match_parent"
             android:layout_height="210dp"
             android:layout_below="@+id/Ask"
             android:gravity="left"
@@ -48,30 +46,40 @@
             android:background="@drawable/rounded_corner"
             android:text="\n  Description:\n   i) Floor deep clean\n   ii) Kitchen stove deep clean\n   iii)Bathroom deep clean(2)\n   iv)Furniture deep clean\n   v)Curtains and carpets\n   vi)Window"
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        />
 
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_marginStart="@dimen/places_autocomplete_prediction_secondary_text"
-
+        android:layout_marginEnd="@dimen/places_autocomplete_prediction_secondary_text"
         android:layout_marginTop="350dp"
         >
 
         <TextView
             android:id="@+id/cost"
-            android:layout_width="340dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/rounded_corner"
             android:gravity="center"
             android:text="Total cost: 3000 Tk"
             android:textStyle="italic"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="@dimen/places_autocomplete_prediction_secondary_text"
+            android:layout_marginBottom="@dimen/places_autocomplete_prediction_secondary_text"
+        />
 
         <Button
             android:id="@+id/button"
@@ -91,12 +99,12 @@
 
     <Button
         android:layout_width="74dp" android:layout_height="41dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:id="@+id/back"
-        android:text="Go Back"
-        android:background="@color/purple"
+        android:text="Back"
+        android:background="@color/quantum_purple100"
         android:drawablePadding="4dp"
 
 
